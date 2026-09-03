@@ -31,7 +31,7 @@ calculado usando o início da próxima música.
 
 Se a setlist estiver em um comentário, clique em **Colar setlist**, copie o
 texto completo do comentário e use **Importar texto**. São aceitas linhas como
-`01:45 The boss` e `1:04:58 Negro Drama`, com ou sem hífen após o horário.
+`01:45 The boss` e `1:04:58 Creep`, com ou sem hífen após o horário.
 
 Marque **Ir para o próximo vídeo ao terminar** para avançar automaticamente
 quando acabar o último trecho selecionado.
