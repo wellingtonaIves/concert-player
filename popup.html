@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concert Player</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">YOUTUBE</p>
+          <h1>Concert Player</h1>
+        </div>
+        <span id="videoStatus" class="status">Verificando…</span>
+      </header>
+
+      <section class="card editor">
+        <label for="nome">Nome da música</label>
+        <input id="nome" maxlength="100" placeholder="Ex.: Everlong">
+
+        <div class="time-grid">
+          <div>
+            <label for="inicio">Início</label>
+            <input id="inicio" inputmode="numeric" placeholder="00:00">
+            <button id="capturarInicio" class="secondary small">Usar tempo atual</button>
+          </div>
+          <div>
+            <label for="fim">Fim</label>
+            <input id="fim" inputmode="numeric" placeholder="00:00">
+            <button id="capturarFim" class="secondary small">Usar tempo atual</button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button id="cancelarEdicao" class="ghost hidden">Cancelar</button>
+          <button id="salvarTrecho">Adicionar música</button>
+        </div>
+        <p id="mensagem" class="message" aria-live="polite"></p>
+      </section>
+
+      <div class="import-actions">
+        <button id="importarDescricao" class="secondary">
+          ↓ Importar da descrição
+        </button>
+        <button id="abrirImportacaoManual" class="secondary">
+          ✎ Colar setlist
+        </button>
+      </div>
+
+      <section id="painelImportacaoManual" class="card manual-import hidden">
+        <label for="textoSetlist">Cole a setlist do comentário</label>
+        <textarea
+          id="textoSetlist"
+          rows="7"
+          placeholder="01:45 The boss (instrumental)&#10;04:15 Panico na zona sul&#10;07:34 Tempos difíceis"
+        ></textarea>
+        <p class="manual-hint">Uma música por linha, começando pelo horário.</p>
+        <div class="form-actions">
+          <button id="cancelarImportacaoManual" class="ghost">Cancelar</button>
+          <button id="importarTextoManual">Importar texto</button>
+        </div>
+      </section>
+
+      <section class="list-section">
+        <div class="list-header">
+          <h2>Músicas</h2>
+          <button id="selecionarTodas" class="text-button">Selecionar todas</button>
+        </div>
+        <div id="lista" class="track-list"></div>
+        <p id="listaVazia" class="empty">Nenhuma música adicionada neste vídeo.</p>
+      </section>
+
+      <label class="advance-option">
+        <input id="avancarProximoVideo" type="checkbox">
+        <span>Ir para o próximo vídeo ao terminar</span>
+      </label>
+
+      <footer>
+        <button id="parar" class="secondary">Parar</button>
+        <button id="reproduzir">▶ Reproduzir seleção</button>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
